@@ -15,7 +15,8 @@ const config: Config = {
       },
       systemColor:{
         'main': '#075D24',
-        'off-white': '#fafafa'
+        'off-white': '#fafafa',
+        'absolute-white':'#fff'
       }
     },
   },
