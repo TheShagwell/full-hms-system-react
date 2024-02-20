@@ -17,7 +17,8 @@ const config: Config = {
         'main': '#075D24',
         'off-white': '#fafafa',
         'absolute-white':'#fff',
-        'grey-bg': '#474747'
+        'grey-bg': '#474747',
+        'grey-bg-40': '#F1F0F0',
       }
     },
   },
