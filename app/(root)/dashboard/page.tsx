@@ -6,6 +6,6 @@ type Props = {}
 
 export default function Home({}: Props) {
   return (
-    <div>Dashboard</div>
+    <div className='bg-purple-100'>Dashboard is a beautiful setup</div>
   )
 }

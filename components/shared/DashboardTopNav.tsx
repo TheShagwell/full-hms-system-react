@@ -4,6 +4,8 @@ type Props = {}
 
 export default function DashboardTopNav({}: Props) {
   return (
-    <div>DashboardTopNav</div>
+    <div className='bg-slate-300'>
+      Dashboard Top Nav
+    </div>
   )
 }

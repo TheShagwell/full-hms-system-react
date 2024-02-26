@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-        suppressHydrationWarning={true} 
         className={cn("min-h-screen w-full bg-white text-black flex", inter.className, {
         "debug-screens": process.env.NODE_ENV === "development"
         })}
@@ -28,3 +27,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+          // suppressHydrationWarning={true} 
