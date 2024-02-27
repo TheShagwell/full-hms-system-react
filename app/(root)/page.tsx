@@ -1,6 +1,6 @@
 "use client"
 export default function Home() {
   return (
-   <div>Home</div>
+   <div className="w-full">Home</div>
   );
 }
