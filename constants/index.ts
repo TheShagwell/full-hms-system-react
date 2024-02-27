@@ -1,12 +1,20 @@
 export const sidebaNavLinks = [
     {
       label: "Dashboard Overview",
-      route: "/",
-      icon: "/assets/icons/home.svg",
+      route: "/dashboard",
+      icon: "/assets/icons/Dashboard-Home.svg",
+      alt: "Home",
     },
     {
-      label: "Image Restore",
-      route: "/transformations/add/restore",
-      icon: "/assets/icons/image.svg",
+      label: "Patient Registration",
+      route: "/Patient-Registration",
+      icon: "/assets/icons/Patient-Reg.svg",
+      alt: "Patient Registration",
+    },
+    {
+      label: "Consultation",
+      route: "/Consultation",
+      icon: "/assets/icons/Ribbon.svg",
+      alt: "Consultation",
     },
   ];
