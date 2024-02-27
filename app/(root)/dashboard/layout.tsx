@@ -18,10 +18,10 @@ export default function DashboardLayout({children}: {children: React.ReactNode})
     //         </div>
     //     </div>
     // </main>
-      <main className='flex min-h-screen flex-col w-full bg-white lg:flex-row'>
+      <main className='border-solid border-red-500 border-2 flex min-h-screen flex-col w-full bg-white lg:flex-row'>
         <Sidebar/>
         <div className="px-4 flex-1 border-solid border-l-pink-500 border-2 overflow-auto lg:mt-0 lg:max-h-screen">
-          <div className="mb-8 justify-start">
+          <div className="mb-8 mt-2 justify-start border-solid border-blue-500 border-2">
               <DashboardTopNav/>
           </div>
           {children}
