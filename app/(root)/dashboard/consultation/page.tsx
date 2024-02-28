@@ -3,8 +3,8 @@ import React from 'react'
 
 type Props = {}
 
-export default function consultation({}: Props) {
+export default function Consultation({}: Props) {
   return (
-    <div>consultation</div>
+    <div>Consultation</div>
   )
 }
