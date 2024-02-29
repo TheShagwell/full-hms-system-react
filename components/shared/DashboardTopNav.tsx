@@ -11,7 +11,6 @@ export default function DashboardTopNav({}: Props) {
       <CalendarDate/>
       <Notifications/>
       <ProfileNavHeader/>
-      Dashboard Top Nav 
     </div>
   )
 }
