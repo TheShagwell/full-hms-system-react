@@ -65,11 +65,11 @@ export function CalendarDate() {
                         !field.value && "text-muted-foreground"
                       )}
                     >
-                      <CalendarIcon className="ml-auto h-5 w-5" />
+                      <CalendarIcon className="ml-auto h-6 w-6" />
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
-                        <span>October 12, 2023</span>
+                        <span className="text-base">October 12, 2023</span>
                       )}
                     </Button>
                   </FormControl>

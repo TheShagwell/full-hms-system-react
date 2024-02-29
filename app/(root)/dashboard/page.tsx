@@ -8,7 +8,7 @@ type Props = {}
 export default function Home({}: Props) {
   return (
     <div className='bg-white'>
-      <CalendarDate/>
+      <p>Dashboard here</p>
     </div>
   )
 }
