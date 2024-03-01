@@ -14,7 +14,7 @@ export default function Sidebar({ }: Props) {
   return (
     <aside className='hidden h-screen bg-[#FBFEFB] w-72 px-3 shadow-md lg:flex'>
       <div className="flex mt-4 w-full flex-col border-solid">
-        <Link href="/dashboard" className='px-4 md:py-2 border-solid'>
+        <Link href="/dashboard" className='mt-12 px-4 md:py-2 border-solid'>
           <Image src="/assets/icons/_system-logo.svg" alt='logo' width={172} height={32} />
         </Link>
         <nav className='h-full overflow-auto flex-col justify-between md:flex md:gap-4 mt-5'>

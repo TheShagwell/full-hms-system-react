@@ -65,4 +65,28 @@ export const sidebaNavLinks = [
       icon: "/assets/icons/Logout.svg",
       alt: "Logout",
     },
+    {
+      label: "Logout",
+      route: "/dashboard/logout",
+      icon: "/assets/icons/Logout.svg",
+      alt: "Logout",
+    },
+    {
+      label: "Logout",
+      route: "/dashboard/logout",
+      icon: "/assets/icons/Logout.svg",
+      alt: "Logout",
+    },
+    {
+      label: "Logout",
+      route: "/dashboard/logout",
+      icon: "/assets/icons/Logout.svg",
+      alt: "Logout",
+    },
+    {
+      label: "Logout",
+      route: "/dashboard/logout",
+      icon: "/assets/icons/Logout.svg",
+      alt: "Logout",
+    },
   ];
