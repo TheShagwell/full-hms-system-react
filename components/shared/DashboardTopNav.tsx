@@ -7,7 +7,7 @@ type Props = {}
 
 export default function DashboardTopNav({}: Props) {
   return (
-    <div className='flex p-3 w-full items-center justify-between rounded-full'>
+    <div className='flex justify-end py-3 items-center gap-3 rounded-full'>
       <CalendarDate/>
       <Notifications/>
       <ProfileNavHeader/>

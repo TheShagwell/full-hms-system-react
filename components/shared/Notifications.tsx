@@ -11,9 +11,9 @@ export default function Notifications({}: Props) {
     //    <Bell strokeWidth={2} color="#000C14" size={24} />
     // </div>
     <Button
-    variant={"outline"}
+    variant={"secondary"}
     className={cn(
-      "max-w-fit py-4 px-4 inline-flex items-center rounded-full font-normal"
+      "rounded-full gap-2 flex justify-center h-[48px] w-[48px] px-2 py-1 items-center"
     )}
   >
     <Bell size={24} />

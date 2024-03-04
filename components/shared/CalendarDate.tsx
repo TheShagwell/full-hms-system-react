@@ -59,10 +59,9 @@ export function CalendarDate() {
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant={"outline"}
+                      variant={"secondary"}
                       className={cn(
-                        "max-w-fit gap-2 inline-flex items-center rounded-3xl font-normal",
-                        !field.value && "text-muted-foreground"
+                        "px-4 py-3 h-[48px] gap-2 flex justify-center items-center rounded-full font-normal",
                       )}
                     >
                       <CalendarIcon className="ml-auto h-6 w-6" />
@@ -81,7 +80,7 @@ export function CalendarDate() {
                     onSelect={field.onChange}
                     captionLayout="dropdown-buttons"
                     fromYear={1900}
-                    toYear={2024}
+                    toYear={2100}
                     disabled={(date) =>
                       date > new Date() && date < new Date("1900-01-01")
                     }
