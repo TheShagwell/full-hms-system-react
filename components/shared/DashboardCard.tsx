@@ -13,8 +13,8 @@ export type Props = {
 export default function CardAnalytic({}: Props) {
   return (
     <CardContentDetail>
-        <div className='flex flex-col'>
-
+        <div className='flex flex-col px-5 pt-8 pb-4'>
+          
         </div>
     </CardContentDetail>
   )
