@@ -1,6 +1,7 @@
+import { routes } from '@/config/routes';
+
 import { 
   Home,
-  Bed,
   HeartPulse,
   Contact2,
   Ribbon,
@@ -17,13 +18,13 @@ import {
 export const sidebaNavLinks = [
     {
       label: "Dashboard Overview",
-      route: "/dashboard",
+      route: routes.dashboard.dashboard,
       icon: <Home />,
       alt: "Home",
     },
     {
       label: "Patient Registration",
-      route: "/dashboard/patient-registration",
+      route: routes.dashboard.patientRegistration,
       icon: <Contact2 />,
       alt: "Patient Registration",
     },
