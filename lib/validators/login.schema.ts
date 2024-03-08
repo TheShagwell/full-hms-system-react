@@ -2,9 +2,9 @@ import { z } from 'zod'
 
 // form zod validation schema
 export const loginSchema = z.object({
-    email: z.string().email(),
-    password: z.string().min(1),
-    rememberMe: z.boolean().optional(),
+    userId: z.string().nonempty({ message: 'User ID is required' }),
+    password: z.string().min(5,{ message: 'Password is required' }),
+    language: z.string().optional().default('en'),
 }) 
 
 // This will generate the form types from zod validation schema
