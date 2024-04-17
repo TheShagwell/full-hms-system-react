@@ -4,6 +4,6 @@ type Props = {}
 
 export default function LandingPageNav({}: Props) {
   return (
-        <div>Home Nav</div>
+        <div>HomeNav</div>
   )
 }
