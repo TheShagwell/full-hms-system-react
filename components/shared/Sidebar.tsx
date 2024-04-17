@@ -14,7 +14,7 @@ export default function Sidebar({ }: Props) {
 
   return (
     <aside className='hidden h-screen bg-[#FBFEFB] w-72 px-3 lg:flex'>
-      <div className="flex mt-0 w-full flex-col border-solid">
+      <div className="flex mt-0 w-full flex-col">
         <Link href="/dashboard" className="sticky top-0 z-40 bg-gray-0/10 px-6 pb-5 pt-5 dark:bg-gray-100/5 2xl:px-8 2xl:pt-6">
           <Image src="/assets/icons/_system-logo.svg" alt='logo' width={172} height={32} />
         </Link>
