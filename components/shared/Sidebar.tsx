@@ -27,7 +27,7 @@ export default function Sidebar({ }: Props) {
                 const isActive = link.route === pathname;
                 return (
                   <li key={link.route} className={`w-full border-solid`}>
-                    <Link className={`flex py-2 px-4 gap-3 text-[.9375rem] max-w-full whitespace-nowrap rounded-full bg-cover transition-all ${isActive ? 'bg-[#F3FCF3] text-[#075D24] fill-current font-semibold' : 'text-[#676767]'} ${!isActive && 'hover:bg-[#F3FCF3] hover:text-[#075D24]'}`} href={link.route}>
+                    <Link className={`flex py-2 px-4 gap-3 text-[.9375rem] max-w-full whitespace-nowrap rounded-full bg-cover transition-all ${isActive ? 'bg-[#F3FCF3] text-[#075D24] fill-current font-medium' : 'text-[#676767]'} ${!isActive && 'hover:bg-[#F3FCF3] hover:font-medium hover:text-[#075D24]'}`} href={link.route}>
                     <span
                       className={cn(
                         'me-2 inline-flex h-5 w-5 items-center justify-center rounded-md [&>svg]:h-[20px] [&>svg]:w-[20px]',
