@@ -16,7 +16,7 @@ export default function PatientCardLink({icon:Icon, title,description, href}: Ca
       </div>
       <div className='flex flex-col items-center justify-center mb-5'>
         <h3 className="text-lg mb-3 text-[1.25rem] font-aeonik font-medium">{title}</h3>
-        <p className="text-[#474747] max-w-[18.75rem] text-center font-aeonik font-normal">{description}</p>
+        <p className="text-[#474747] max-w-[18.75rem] text-sm tracking-wide text-center font-aeonik font-normal">{description}</p>
       </div>
     </Link>
   )
