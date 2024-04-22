@@ -7,9 +7,6 @@ type Props = {}
 
 export default function Notifications({}: Props) {
   return (
-    // <div className='flex bg-[#FAFAFA] py-3 px-3 rounded-full'>
-    //    <Bell strokeWidth={2} color="#000C14" size={24} />
-    // </div>
     <Button
     variant={"secondary"}
     className={cn(

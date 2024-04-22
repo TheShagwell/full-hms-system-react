@@ -6,6 +6,7 @@ interface Card {
   title: string;
   description: string;
   href: string
+  onClick?: (event: Event) => void;
 }
 
 export default function PatientCardLink({icon:Icon, title,description, href}: Card) {
