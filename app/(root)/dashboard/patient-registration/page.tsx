@@ -34,7 +34,7 @@ export default function PatientRegistration({}: Props) {
         <p className='max-w-full tracking-wide font-normal text-sm text-center text-[#474747]'>Tell us the category the patient falls into to continue registration</p>
       </div>
       <div className="flex gap-5">
-        <PatientCardLink icon={SearchIcon} title='Add New Appointments' href='' description='Do a seamless health care service from our system and get a percent.'  />        
+        <PatientCardLink icon={SearchIcon} title='Add New Appointments' href='/dashboard/billing' description='Do a seamless health care service from our system and get a percent.'  />        
         <PatientCardLink icon={UserRoundPlus} title='Add New Patient' onClick={handleAddPatientClick} href='' description='Grab the opportunity to use office HMO, NHIS, Youth service.'  />
       </div>
 
