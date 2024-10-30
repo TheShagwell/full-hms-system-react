@@ -54,8 +54,8 @@ export function MultiStepForm() {
   };
 
   return (
-    <div>
-      <div className="flex items-center justify-center gap-1">
+    <div className="mb-12">
+      <div className="flex items-center justify-center mb-6 gap-1">
         {steps.map((s, idx) => (
           <Button
             key={idx}
@@ -67,9 +67,13 @@ export function MultiStepForm() {
         ))}
       </div>
       {StepComponent()}
-      {step > 0 && <Button onClick={handleBack}>Back</Button>}
-      {step < 2 && <Button onClick={() => setStep(step + 1)}>Next</Button>}
-      {step === 2 && <Button onClick={handleSubmit}>Submit</Button>}
+      <div className="mt-3 flex justify-between">
+        {step > 0 && <Button onClick={handleBack}>Back</Button>}
+        {step < 2 && (
+          <Button onClick={() => setStep(step + 1)}>Continue</Button>
+        )}
+        {step === 2 && <Button onClick={handleSubmit}>Submit</Button>}
+      </div>
     </div>
   );
 }
