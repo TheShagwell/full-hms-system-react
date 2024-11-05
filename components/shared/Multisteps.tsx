@@ -36,7 +36,7 @@ export function MultiStepForm() {
   const handleBack = () => setStep(step - 1);
 
   const handleSubmit = () => {
-    // Here you would typically send the data to an API or perform some action
+ 
     console.log("Final Form Data:", formData);
   };
 
