@@ -68,7 +68,7 @@ export function MultiStepForm() {
       </div>
       {StepComponent()}
       <div className="mt-3 flex justify-between">
-        {step > 0 && <Button onClick={handleBack}>Back</Button>}
+        {step > 0 && <Button onClick={handleBack}>Go Back</Button>}
         {step < 2 && (
           <Button onClick={() => setStep(step + 1)}>Continue</Button>
         )}
