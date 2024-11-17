@@ -14,11 +14,7 @@ export const metadata: Metadata = {
   description: "Designed and flagged from ITANDT Solutions, to be used by Hospitals, Clinics, Pharmacies etc.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children, }: Readonly<{children: React.ReactNode; }>) {
   return (
     <html lang="en">
       <body 
