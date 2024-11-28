@@ -17,129 +17,135 @@ import { PhotoDetailsStep } from "./steps/photo-details-step"
 import { CommunicationStep } from "./steps/communication-step"
 import { ConfirmationStep } from "./steps/confirmation-step"
 import { registrationSchema, type RegistrationData } from "@/lib/formValidations/registration"
+import { useRouter } from "next/navigation";
 // Patient Registration Interface
-export interface PatientRegistration {
-    walkThrough: {
-      registrationType: string
-      tagPatient: string
-      reasonForVisit: string
-    }
-    basicInformation: {
-      title: string
-      fullName: string
-      profession: string
-      mobileNumber: string
-      email: string
-      dateOfBirth: Date
-      maritalStatus: string
-      gender: string
-      individualCategory: string
-      bloodGroup: string
-      genotype: string
-    }
-    contactInformation: {
-      nationalIdNumber: string
-      trackingId: string
-      homeAddress?: string
-      city?: string
-      nextOfKinFullName: string
-      nextOfKinMobileNumber: string
-      nextOfKinProfession?: string
-      nextOfKinRelationship: string
-      nextOfKinAddress?: string
-      region?: string
-      country: string
-      religion: string
-      state: string
-    }
-    visitingInformation: {
-      consultationDate: Date
-      consultationFee: string
-      consultationTime: string
-      consultationComplaints?: string
-      consultationRemarks?: string
-      visitingDepartment: string
-      consultationType: string
-      referredBy?: string
-      visitingType: string
-      consultingDoctor: string
-      transferredFrom?: string
-    }
-    communicationMode: {
-      sms: boolean
-      push: boolean
-    }
-  }
+// export interface PatientRegistration {
+//     walkThrough: {
+//       registrationType: string
+//       tagPatient: string
+//       reasonForVisit: string
+//     }
+//     basicInformation: {
+//       title: string
+//       fullName: string
+//       profession: string
+//       mobileNumber: string
+//       email: string
+//       dateOfBirth: Date
+//       maritalStatus: string
+//       gender: string
+//       individualCategory: string
+//       bloodGroup: string
+//       genotype: string
+//     }
+//     contactInformation: {
+//       nationalIdNumber: string
+//       trackingId: string
+//       homeAddress?: string
+//       city?: string
+//       nextOfKinFullName: string
+//       nextOfKinMobileNumber: string
+//       nextOfKinProfession?: string
+//       nextOfKinRelationship: string
+//       nextOfKinAddress?: string
+//       region?: string
+//       country: string
+//       religion: string
+//       state: string
+//     }
+//     visitingInformation: {
+//       consultationDate: Date
+//       consultationFee: string
+//       consultationTime: string
+//       consultationComplaints?: string
+//       consultationRemarks?: string
+//       visitingDepartment: string
+//       consultationType: string
+//       referredBy?: string
+//       visitingType: string
+//       consultingDoctor: string
+//       transferredFrom?: string
+//     }
+//     communicationMode: {
+//       sms: boolean
+//       push: boolean
+//     }
+//   }
 
 const steps = [
-  { title: "Walk Through", component: WalkThroughStep },
+//   { title: "Walk Through", component: WalkThroughStep },
   { title: "Basic Information", component: BasicInfoStep },
   { title: "Contact Information", component: ContactInfoStep },
   { title: "Visiting Information", component: VisitingInfoStep },
-  { title: "Capture Photo Details", component: PhotoDetailsStep },
-  { title: "Communication Mode", component: CommunicationStep },
+//   { title: "Capture Photo Details", component: PhotoDetailsStep },
+//   { title: "Communication Mode", component: CommunicationStep },
   { title: "Confirmation", component: ConfirmationStep },
 ]
 
 export function RegistrationForm() {
+    const router = useRouter();
+
   const [currentStep, setCurrentStep] = useState(0)
   const { toast } = useToast()
   
   const form = useForm<RegistrationData>({
     resolver: zodResolver(registrationSchema),
     defaultValues: {
-      walkThrough: {
-        registrationType: "",
-        tagPatient: "",
-        reasonForVisit: "",
-      },
+    //   walkThrough: {
+    //     registrationType: "",
+    //     tagPatient: "",
+    //     reasonForVisit: "",
+    //   },
       basicInfo: {
         title: "",
+        mrNumber: "",
         fullName: "",
-        profession: "",
+        occupation: "",
         mobileNumber: "",
         additionalNumber: "",
         email: "",
+        dateOfBirth: new Date(),
         maritalStatus: "",
         gender: "",
-        individual: "",
+        // individual: "",
         bloodGroup: "",
         genotype: "",
       },
       contactInfo: {
-        nationalIdNumber: "",
-        trackingId: "",
+        // nationalIdNumber: "",
+        // trackingId: "",
         homeAddress: "",
         city: "",
-        nextOfKinFullname: "",
-        nextOfKinMobile: "",
-        nextOfKinProfession: "",
-        nextOfKinRelationship: "",
+        nextOfKinName: "",
+        nextOfKinPhoneNo: "",
+        nextOfKinOccupation: "",
+        nextOfKinRelation: "",
         nextOfKinAddress: "",
         region: "",
-        country: "",
+        countryNationality: "",
         religion: "",
         state: "",
       },
       VisitingInfo: {
-        consultationDate: "",
+        consultationDate: new Date(),
         consultationFee: "",
         consultationTime: "",
         consultationRemarks: "",
+        consultationComplaints: "",
         visitingDepartment: "",
         consultationType: "",
         referredBy: "",
         visitingType: "",
         consultingDoctor: "",
-        transferredFrom: "",
+        // transferredFrom: "",
       },
-      PhotoDetailsInfo: {
-        photo: ""
-      },
-      CommunicationInfo: {
-        sms: "",
-        push: "",
-      }
+    //   PhotoDetailsInfo: {
+    //     photo: ""
+    //   },
+    //   CommunicationInfo: {
+    //     sms: "",
+    //     push: "",
+    //   }
 
 
       // ... other default values
@@ -147,25 +153,76 @@ export function RegistrationForm() {
   })
 
   const onSubmit = async (data: RegistrationData) => {
+    // try {
+    //     const response = await axios.post(
+    //         'http://localhost:8080/CareHMS-API/patients', 
+    //         data, {
+    //             headers: {
+    //               "Content-Type": "application/json",
+    //             },
+    //         }
+    //       );
+
+    //       const d = await response.data;
+    //       if(d.status === 200) {
+    //         router.push('/dashboard');
+    //         toast({
+    //           title: "Success!",
+    //           description: "Patient registration completed successfully.",
+    //         })
+    //       } else{
+    //         toast({
+    //             title: "Error",
+    //             description: "Something went wrong. Please try again.",
+    //             variant: "destructive",
+    //           })
+    //       }
+    //       console.log(d)
+        
+    //     //   return response.data;
+          
+    // } catch (error) {
+    //   toast({
+    //     title: "Error",
+    //     description: "Something went wrong. Please try again.",
+    //     variant: "destructive",
+    //   })
+    // }
+    console.log("function is working");
+    console.log(data);
     try {
+        // Transform data if necessary
+        const payload = {
+          ...data
+        };
+  
         const response = await axios.post(
-            'http://localhost:8080/CareHMS-API/patients', 
-            data
-          )
-          return response.data
-      // Here you would typically send the data to your backend
-      console.log(data)
-      toast({
-        title: "Success!",
-        description: "Patient registration completed successfully.",
-      })
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
-        variant: "destructive",
-      })
-    }
+          "http://localhost:8080/CareHMS-API/patients",
+          payload,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+  
+        if (response.data.status === 200) {
+          toast({
+            title: "Success!",
+            description: "Patient registration completed successfully.",
+          });
+          router.push("/dashboard");
+        } else {
+          throw new Error(response.data.message || "Unexpected error occurred");
+        }
+      } catch (error: any) {
+        console.error("API Error:", error);
+        toast({
+          title: "Error",
+          description: error.response?.data?.message || error.message || "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
   }
 
   const CurrentStepComponent = steps[currentStep].component

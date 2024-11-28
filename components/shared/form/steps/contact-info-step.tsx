@@ -8,7 +8,7 @@ export function ContactInfoStep({ form }) {
   return (
     <div className="space-y-4">
       <div className="grid grid-cols-2 gap-4">
-        <FormField
+        {/* <FormField
           control={form.control}
           name="contactInfo.nationalIdNumber"
           render={({ field }) => (
@@ -20,9 +20,9 @@ export function ContactInfoStep({ form }) {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
 
-        <FormField
+        {/* <FormField
           control={form.control}
           name="contactInfo.trackingId"
           render={({ field }) => (
@@ -34,17 +34,17 @@ export function ContactInfoStep({ form }) {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
       </div>
 
       <FormField
         control={form.control}
-        name="contactInfo.homeAddress"
+        name="homeAddress"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Home Address</FormLabel>
             <FormControl>
-              <Input placeholder="Enter home address" {...field} />
+              <Input placeholder="Enter home address" {...field} value={field.value || ""}/>
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -54,12 +54,12 @@ export function ContactInfoStep({ form }) {
       <div className="grid grid-cols-2 gap-4">
         <FormField
           control={form.control}
-          name="contactInfo.city"
+          name="city"
           render={({ field }) => (
             <FormItem>
               <FormLabel>City</FormLabel>
               <FormControl>
-                <Input placeholder="Enter city" {...field} />
+                <Input placeholder="Enter city" {...field} value={field.value || ""} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -68,7 +68,7 @@ export function ContactInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="contactInfo.state"
+          name="state"
           render={({ field }) => (
             <FormItem>
               <FormLabel>State</FormLabel>
@@ -95,12 +95,12 @@ export function ContactInfoStep({ form }) {
         <div className="grid grid-cols-2 gap-4">
           <FormField
             control={form.control}
-            name="contactInfo.nextOfKinFullname"
+            name="nextOfKinName"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Next of Kin Full Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter full name" {...field} />
+                  <Input placeholder="Enter full name" {...field} value={field.value || ""} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -109,12 +109,12 @@ export function ContactInfoStep({ form }) {
 
           <FormField
             control={form.control}
-            name="contactInfo.nextOfKinMobile"
+            name="nextOfKinPhoneNo"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Next of Kin Mobile</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="Enter mobile number" {...field} />
+                  <Input type="tel" placeholder="Enter mobile number" {...field} value={field.value || ""}/>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -125,7 +125,7 @@ export function ContactInfoStep({ form }) {
         <div className="grid grid-cols-2 gap-4">
           <FormField
             control={form.control}
-            name="contactInfo.nextOfKinProfession"
+            name="nextOfKinOccupation"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Next of Kin Profession</FormLabel>
@@ -147,7 +147,7 @@ export function ContactInfoStep({ form }) {
 
           <FormField
             control={form.control}
-            name="contactInfo.nextOfKinRelationship"
+            name="nextOfKinRelation"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Relationship</FormLabel>
@@ -171,12 +171,12 @@ export function ContactInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="contactInfo.nextOfKinAddress"
+          name="nextOfKinAddress"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Next of Kin Address</FormLabel>
               <FormControl>
-                <Input placeholder="Enter address" {...field} />
+                <Input placeholder="Enter address" {...field}value={field.value || ""} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -187,7 +187,7 @@ export function ContactInfoStep({ form }) {
       <div className="grid grid-cols-3 gap-4">
         <FormField
           control={form.control}
-          name="contactInfo.country"
+          name="countryNationality"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Country</FormLabel>
@@ -209,7 +209,7 @@ export function ContactInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="contactInfo.religion"
+          name="religion"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Religion</FormLabel>
@@ -231,12 +231,12 @@ export function ContactInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="contactInfo.region"
+          name="region"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Region</FormLabel>
               <FormControl>
-                <Input placeholder="Enter region" {...field} />
+                <Input placeholder="Enter region" {...field} value={field.value || ""}/>
               </FormControl>
               <FormMessage />
             </FormItem>

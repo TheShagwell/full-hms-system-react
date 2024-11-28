@@ -18,48 +18,69 @@ export function ConfirmationStep({ form }) {
     {
       title: "Basic Information",
       fields: [
-        { label: "Title", value: formValues.basicInfo?.title },
-        { label: "Full Name", value: formValues.basicInfo?.fullName },
-        { label: "Profession", value: formValues.basicInfo?.profession },
-        { label: "Mobile Number", value: formValues.basicInfo?.mobileNumber },
-        { label: "Email", value: formValues.basicInfo?.email },
+        { label: "Title", value: formValues.title },
+        { label: "Full Name", value: formValues.fullName },
+        { label: "Profession", value: formValues.occupation },
+        { label: "Mobile Number", value: formValues.mobileNumber },
+        { label: "Additional Mobile Number", value: formValues.additionalNumber },
+        { label: "Email", value: formValues.email },
         {
           label: "Date of Birth",
-          value: formValues.basicInfo?.dateOfBirth
+          value: formValues.dateOfBirth
             ? format(new Date(formValues.basicInfo.dateOfBirth), "PPP")
             : "",
         },
-        { label: "Marital Status", value: formValues.basicInfo?.maritalStatus },
-        { label: "Gender", value: formValues.basicInfo?.gender },
-        { label: "Individual", value: formValues.basicInfo?.individual },
-        { label: "Blood Group", value: formValues.basicInfo?.bloodGroup },
-        { label: "Genotype", value: formValues.basicInfo?.genotype },
+        { label: "Marital Status", value: formValues.maritalStatus },
+        { label: "Gender", value: formValues.gender },
+        // { label: "Individual", value: formValues.basicInfo?.individual },
+        { label: "Blood Group", value: formValues.bloodGroup },
+        { label: "Genotype", value: formValues.genotype },
       ],
     },
     {
       title: "Contact Information",
       fields: [
-        { label: "National ID", value: formValues.contactInfo?.nationalIdNumber },
-        { label: "Tracking ID", value: formValues.contactInfo?.trackingId },
-        { label: "Home Address", value: formValues.contactInfo?.homeAddress },
-        { label: "City", value: formValues.contactInfo?.city },
-        { label: "State", value: formValues.contactInfo?.state },
-        { label: "Country", value: formValues.contactInfo?.country },
-        { label: "Religion", value: formValues.contactInfo?.religion },
-        { label: "Region", value: formValues.contactInfo?.region },
+        // { label: "National ID", value: formValues.contactInfo?.nationalIdNumber },
+        // { label: "Tracking ID", value: formValues.contactInfo?.trackingId },
+        { label: "Home Address", value: formValues.homeAddress },
+        { label: "City", value: formValues.city },
+        { label: "State", value: formValues.state },
+        { label: "Country", value: formValues.countryNationality },
+        { label: "Religion", value: formValues.religion },
+        { label: "Region", value: formValues.region },
       ],
     },
     {
       title: "Next of Kin",
       fields: [
-        { label: "Full Name", value: formValues.contactInfo?.nextOfKinFullname },
-        { label: "Mobile", value: formValues.contactInfo?.nextOfKinMobile },
-        { label: "Profession", value: formValues.contactInfo?.nextOfKinProfession },
-        { label: "Relationship", value: formValues.contactInfo?.nextOfKinRelationship },
-        { label: "Address", value: formValues.contactInfo?.nextOfKinAddress },
+        { label: "Next of Kin Fullname", value: formValues.nextOfKinName },
+        { label: "Mobile", value: formValues.nextOfKinPhoneNo },
+        { label: "Profession", value: formValues.nextOfKinOccupation },
+        { label: "Relationship", value: formValues.nextOfKinRelation },
+        { label: "Address", value: formValues.nextOfKinAddress },
       ],
     },
-  ]
+    {
+      title: "Visiting Information",
+      fields: [
+        {
+            label: "Consultation Date",
+            value: formValues.consultationDate
+              ? format(new Date(formValues.consultationDate), "PPP")
+              : "",
+          },
+        { label: "Consultation Fee", value: formValues.consultationFee },
+        { label: "Consultation Time", value: formValues.consultationTime },
+        { label: "Consultation Remarks", value: formValues.consultationRemarks },
+        { label: "ConsultationComplaints", value: formValues.consultationComplaints },
+        { label: "Visiting Department", value: formValues.visitingDepartment },
+        { label: "Consultation Type", value: formValues.consultationType },
+        { label: "Referred By", value: formValues.referredBy },
+        { label: "Visiting Type", value: formValues.visitingType },
+        { label: "Consulting Doctor", value: formValues.consultingDoctor },
+      ],
+    },
+]
 
   return (
     <div className="space-y-6">

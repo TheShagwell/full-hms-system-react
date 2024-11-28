@@ -11,7 +11,7 @@ export function VisitingInfoStep({ form }) {
       <div className="grid grid-cols-2 gap-4">
         <FormField
           control={form.control}
-          name="visitingInfo.consultationDate"
+          name="consultationDate"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Consultation Date</FormLabel>
@@ -27,12 +27,12 @@ export function VisitingInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="visitingInfo.consultationTime"
+          name="consultationTime"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Consultation Time</FormLabel>
               <FormControl>
-                <Input type="time" {...field} />
+                <Input type="time" {...field} value={field.value || ""} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -42,12 +42,12 @@ export function VisitingInfoStep({ form }) {
 
       <FormField
         control={form.control}
-        name="visitingInfo.consultationFee"
+        name="consultationFee"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Consultation Fee (Fixed)</FormLabel>
             <FormControl>
-              <Input type="number" placeholder="Enter consultation fee" {...field} />
+              <Input type="number" placeholder="Enter consultation fee" {...field} value={field.value || ""}/>
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -57,12 +57,12 @@ export function VisitingInfoStep({ form }) {
       <div className="grid grid-cols-2 gap-4">
         <FormField
           control={form.control}
-          name="visitingInfo.consultationComplaints"
+          name="consultationComplaints"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Consultation Complaints</FormLabel>
               <FormControl>
-                <Input placeholder="Enter complaints" {...field} />
+                <Input placeholder="Enter complaints" {...field} value={field.value || ""}/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -71,12 +71,12 @@ export function VisitingInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="visitingInfo.consultationRemarks"
+          name="consultationRemarks"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Consultation Remarks</FormLabel>
               <FormControl>
-                <Input placeholder="Enter remarks" {...field} />
+                <Input placeholder="Enter remarks" {...field} value={field.value || ""}/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -87,7 +87,7 @@ export function VisitingInfoStep({ form }) {
       <div className="grid grid-cols-2 gap-4">
         <FormField
           control={form.control}
-          name="visitingInfo.visitingDepartment"
+          name="visitingDepartment"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Visiting Department</FormLabel>
@@ -109,7 +109,7 @@ export function VisitingInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="visitingInfo.consultationType"
+          name="consultationType"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Consultation Type</FormLabel>
@@ -133,7 +133,7 @@ export function VisitingInfoStep({ form }) {
       <div className="grid grid-cols-2 gap-4">
         <FormField
           control={form.control}
-          name="visitingInfo.referredBy"
+          name="referredBy"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Referred By</FormLabel>
@@ -144,8 +144,8 @@ export function VisitingInfoStep({ form }) {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="dr-sarah">Dr. Sarah</SelectItem>
-                  <SelectItem value="dr-john">Dr. John</SelectItem>
+                  <SelectItem value="drjumiks">Dr. Jumiks</SelectItem>
+                  <SelectItem value="drannabel">Dr. Annabel</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -155,7 +155,7 @@ export function VisitingInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="visitingInfo.visitingType"
+          name="visitingType"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Visiting Type</FormLabel>
@@ -179,7 +179,7 @@ export function VisitingInfoStep({ form }) {
       <div className="grid grid-cols-2 gap-4">
         <FormField
           control={form.control}
-          name="visitingInfo.consultingDoctor"
+          name="consultingDoctor"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Consulting Doctor</FormLabel>
@@ -190,8 +190,8 @@ export function VisitingInfoStep({ form }) {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="dr-gerald">Dr. Gerald</SelectItem>
-                  <SelectItem value="dr-abraham">Dr. Abraham</SelectItem>
+                  <SelectItem value="drGerald">Dr. Gerald</SelectItem>
+                  <SelectItem value="drAbraham">Dr. Abraham</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -199,7 +199,7 @@ export function VisitingInfoStep({ form }) {
           )}
         />
 
-        <FormField
+        {/* <FormField
           control={form.control}
           name="visitingInfo.transferredFrom"
           render={({ field }) => (
@@ -219,7 +219,7 @@ export function VisitingInfoStep({ form }) {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
       </div>
     </div>
   )

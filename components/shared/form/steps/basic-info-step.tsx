@@ -15,7 +15,7 @@ export function BasicInfoStep({ form }) {
       <div className="grid grid-cols-2 gap-4">
         <FormField
           control={form.control}
-          name="basicInfo.title"
+          name="title"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Title</FormLabel>
@@ -38,12 +38,26 @@ export function BasicInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="basicInfo.fullName"
+          name="fullName"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Full Name</FormLabel>
               <FormControl>
-                <Input placeholder="Enter full name" {...field} />
+                <Input placeholder="Enter full name" {...field} value={field.value || ""}/>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="mrNumber"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>MRNumber</FormLabel>
+              <FormControl>
+                <Input placeholder="Enter MRNumber" {...field} value={field.value || ""} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -54,7 +68,7 @@ export function BasicInfoStep({ form }) {
       <div className="grid grid-cols-2 gap-4">
         <FormField
           control={form.control}
-          name="basicInfo.profession"
+          name="profession"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Profession</FormLabel>
@@ -75,7 +89,7 @@ export function BasicInfoStep({ form }) {
         />
         <FormField
           control={form.control}
-          name="basicInfo.occupation"
+          name="occupation"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Occupation</FormLabel>
@@ -97,12 +111,12 @@ export function BasicInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="basicInfo.mobileNumber"
+          name="mobileNumber"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Mobile Number</FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="Enter mobile number" {...field} />
+                <Input type="tel" placeholder="Enter mobile number" {...field} value={field.value || ""}/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -111,12 +125,12 @@ export function BasicInfoStep({ form }) {
       </div>
         <FormField
           control={form.control}
-          name="basicInfo.additionalNumber"
+          name="additionalNumber"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Additional Mobile Number</FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="Enter mobile number" {...field} />
+                <Input type="tel" placeholder="Enter mobile number" {...field} value={field.value || ""}/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -125,12 +139,12 @@ export function BasicInfoStep({ form }) {
 
       <FormField
         control={form.control}
-        name="basicInfo.email"
+        name="email"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Email</FormLabel>
             <FormControl>
-              <Input type="email" placeholder="Enter email address" {...field} />
+              <Input type="email" placeholder="Enter email address" {...field} value={field.value || ""}/>
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -139,7 +153,7 @@ export function BasicInfoStep({ form }) {
 
       <FormField
         control={form.control}
-        name="basicInfo.dateOfBirth"
+        name="dateOfBirth"
         render={({ field }) => (
           <FormItem className="flex flex-col">
             <FormLabel>Date of Birth</FormLabel>
@@ -162,7 +176,7 @@ export function BasicInfoStep({ form }) {
               <PopoverContent className="w-auto p-0" align="start">
                 <Calendar
                   mode="single"
-                  selected={field.value}
+                  selected={field.value || null}
                   onSelect={field.onChange}
                   disabled={(date) =>
                     date > new Date() || date < new Date("1900-01-01")
@@ -179,7 +193,7 @@ export function BasicInfoStep({ form }) {
       <div className="grid grid-cols-2 gap-4">
         <FormField
           control={form.control}
-          name="basicInfo.maritalStatus"
+          name="maritalStatus"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Marital Status</FormLabel>
@@ -201,7 +215,7 @@ export function BasicInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="basicInfo.gender"
+          name="gender"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Gender</FormLabel>
@@ -223,7 +237,7 @@ export function BasicInfoStep({ form }) {
       </div>
 
       <div className="grid grid-cols-3 gap-4">
-        <FormField
+        {/* <FormField
           control={form.control}
           name="basicInfo.individual"
           render={({ field }) => (
@@ -244,11 +258,11 @@ export function BasicInfoStep({ form }) {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
 
         <FormField
           control={form.control}
-          name="basicInfo.bloodGroup"
+          name="bloodGroup"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Blood Group</FormLabel>
@@ -270,7 +284,7 @@ export function BasicInfoStep({ form }) {
 
         <FormField
           control={form.control}
-          name="basicInfo.genotype"
+          name="genotype"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Genotype</FormLabel>
