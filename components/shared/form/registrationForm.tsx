@@ -97,19 +97,33 @@ export function RegistrationForm() {
     //     reasonForVisit: "",
     //   },
       basicInfo: {
-        title: "",
         mrNumber: "",
+        profession: "",
         fullName: "",
         occupation: "",
         mobileNumber: "",
+        title: "",
         additionalNumber: "",
-        email: "",
-        dateOfBirth: new Date(),
-        maritalStatus: "",
-        gender: "",
-        // individual: "",
         bloodGroup: "",
+        dateOfBirth: new Date(),
+        email: "",
+        gender: "",
         genotype: "",
+        maritalStatus: "",
+        //
+        // title: "",
+        // mrNumber: "",
+        // fullName: "",
+        // occupation: "",
+        // mobileNumber: "",
+        // additionalNumber: "",
+        // email: "",
+        // dateOfBirth: new Date(),
+        // maritalStatus: "",
+        // gender: "",
+        // individual: "",
+        // bloodGroup: "",
+        // genotype: "",
       },
       contactInfo: {
         // nationalIdNumber: "",
@@ -243,6 +257,16 @@ export function RegistrationForm() {
             >
               Previous
             </Button>
+
+            {/* <Button
+                type="button"
+                onClick={() => {
+                    form.handleSubmit(onSubmit)();
+                }}
+                >
+                Debug Submit
+                </Button> */}
+
             
             {currentStep === steps.length - 1 ? (
               <Button type="submit">Submit Registration</Button>
