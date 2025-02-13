@@ -41,7 +41,6 @@ export function ConfirmationStep({ form }) {
       title: "Contact Information",
       fields: [
         // { label: "National ID", value: formValues.contactInfo?.nationalIdNumber },
-        // { label: "Tracking ID", value: formValues.contactInfo?.trackingId },
         { label: "Home Address", value: formValues.homeAddress },
         { label: "City", value: formValues.city },
         { label: "State", value: formValues.state },
