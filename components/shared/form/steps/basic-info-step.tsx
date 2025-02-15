@@ -206,6 +206,7 @@ export function BasicInfoStep({ form }) {
                 <SelectContent>
                   <SelectItem value="single">Single</SelectItem>
                   <SelectItem value="married">Married</SelectItem>
+                  <SelectItem value="married">Divorced</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
